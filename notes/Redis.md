@@ -320,7 +320,7 @@ Redis Cluster。
 
 ### 2. 时间事件
 
-又分为两类：定时事件是让一段程序在指定的时间之内执行一次；周期性时间是让一段程序每隔指定时间就执行一次。
+又分为两类：定时事件是让一段程序在指定的时间之内执行一次；周期性事件是让一段程序每隔指定时间就执行一次。
 
 ## 事件的调度与执行
 
@@ -427,7 +427,7 @@ Redis 这种内存数据库能支持计数器频繁的读写操作。
 |volatile-random | 从已设置过期时间的数据集中任意选择数据淘汰 |
 | allkeys-lru | 从所有数据集中挑选最近最少使用的数据淘汰 |
 | allkeys-random | 从所有数据集中任意选择数据进行淘汰 |
-| no-envicition | 禁止驱逐数据 |
+| noeviction | 禁止驱逐数据 |
 
 如果使用 Redis 来缓存数据时，要保证所有数据都是热点数据，可以将内存最大使用量设置为热点数据占用的内存量，然后启用 allkeys-lru 淘汰策略，将最近最少使用的数据淘汰。
 
@@ -466,7 +466,7 @@ Redis 没有关系型数据库中的表这一概念来将同类型的数据存�
 # 参考资料
 
 - Carlson J L. Redis in Action[J]. Media.johnwiley.com.au, 2013.
-- 黄健宏. Redis 设计与实现 [M]. 机械工业出版社, 2014.
+- [黄健宏. Redis 设计与实现 [M]. 机械工业出版社, 2014.](http://redisbook.com/index.html)
 - [REDIS IN ACTION](https://redislabs.com/ebook/foreword/)
 - [论述 Redis 和 Memcached 的差异](http://www.cnblogs.com/loveincode/p/7411911.html)
 - [Redis 3.0 中文版- 分片](http://wiki.jikexueyuan.com/project/redis-guide)
